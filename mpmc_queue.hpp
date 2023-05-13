@@ -1,7 +1,7 @@
 #ifndef MPMC_QUEUE
 #define MPMC_QUEUE
 
-#include "circular_buffer.hpp"
+#include "ring_buffer.hpp"
 #include <mutex>
 #include <condition_variable>
 #include <optional>

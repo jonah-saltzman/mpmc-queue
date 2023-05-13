@@ -1,4 +1,4 @@
-#include "circular_buffer.hpp"
+#include "ring_buffer.hpp"
 #include "mpmc_queue.hpp"
 #include <cassert>
 #include <thread>
