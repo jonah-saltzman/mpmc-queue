@@ -44,8 +44,11 @@ public:
     }
 
     void close() {
-        std::unique_lock<std::mutex> l(buf_mutex);
-        closed = true;
+        {
+            std::unique_lock<std::mutex> l(buf_mutex);
+            closed = true;
+        }
+        consumers.notify_all();
     }
 
 private:
